@@ -1,3 +1,4 @@
+# don't forget to set wandb api key in secrets
 WANDB_PROJECT = "wandb-cicd-course"
 ENTITY = 'jieqingshi'
 BDD_CLASSES = {i:c for i,c in enumerate(['background', 'road', 'traffic light', 'traffic sign', 'person', 'vehicle', 'bicycle'])}
