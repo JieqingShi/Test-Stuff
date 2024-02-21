@@ -1,5 +1,5 @@
 ## This script comes from 04_refactor_baseline.ipynb
-
+# This example is from another W&B course
 import argparse, os
 import wandb
 from pathlib import Path
