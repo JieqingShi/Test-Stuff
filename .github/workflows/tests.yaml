@@ -2,7 +2,7 @@ name: "Unit & Smoke Tests - mamba"
 on:
   pull_request:
     paths:
-      - test-example/**
+      - test-example/**  # will only run on pull requests that were triggered by changes to any files in test-examples/
       
   workflow_dispatch:
 
@@ -16,7 +16,7 @@ jobs:
     steps:
 
       - name: Copy Repository Contents
-        uses: actions/checkout@master   
+        uses: actions/checkout@main  
    
       # - name: Install Conda environment with Micromamba
       #   uses: mamba-org/provision-with-micromamba@main
