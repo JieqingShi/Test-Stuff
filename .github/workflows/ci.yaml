@@ -12,7 +12,7 @@ jobs:
       - name: Check out repository code
       - uses: actions/checkout@v3
       - name: List filfes in the repository
-        run: |
+      - run: |
           ls ${{ $github.workspace }}
       - run: echo "This job's status is ${{ job.status }}. 🍒"
       # - name: run python script
