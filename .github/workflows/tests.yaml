@@ -14,7 +14,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-
+      - name: Apply workaround to free disk space by deleting a bunch of shit
+      - run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
       - name: Copy Repository Contents
         uses: actions/checkout@main  
    
