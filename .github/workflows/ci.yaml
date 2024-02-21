@@ -15,7 +15,7 @@ jobs:
         run: |
           ls ${{ $github.workspace }}
       - run: echo "This job's status is ${{ job.status }}. 🍒"
-      - name: run python script
-        run: |
-          pip install -r requirements.txt
-          python ci.py
+      # - name: run python script
+      #   run: |
+      #     pip install -r requirements.txt
+      #     python ci.py
