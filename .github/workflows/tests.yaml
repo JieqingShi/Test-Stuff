@@ -18,14 +18,20 @@ jobs:
       - name: Copy Repository Contents
         uses: actions/checkout@main   
    
-      - name: Install Conda environment with Micromamba
-        uses: mamba-org/provision-with-micromamba@main
+      # - name: Install Conda environment with Micromamba
+      #   uses: mamba-org/provision-with-micromamba@main
+      #   with:
+      #     environment-file: test-example/conda-environment.yaml
+      #     environment-name: course
+      #     cache-env: true
+      #     cache-downloads: true
+      - name: Install conda environment with Micromamba
+        uses: mamba-org/setup-micromamba@v1
         with:
+          micromamba-version: '1.3.1-0'
           environment-file: test-example/conda-environment.yaml
-          environment-name: course
-          cache-env: true
+          cache-environment: true
           cache-downloads: true
-          
       - run: |
           micromamba activate course
           pip install -U pytest
